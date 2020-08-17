@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    form(action="/url" method="POST")
+        div(class="form-group")
+            div(class='container')
+                div(class='row')
+                    div(class='col-10')
+                        label(for='urlInput' class='text-primary') Please enter your zoom url here.
+                        input(type='text' class='form-control' id='urlInput' name='urlInput')
+                    div(class='col-2')
+                        button(type='submit' class='btn btn-primary' style='margin-top: 31px;') Submit

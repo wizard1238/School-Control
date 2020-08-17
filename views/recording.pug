@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Recording
+    h3 Recording Status: #{recording}
+    h3 Class being recorded: #{currentClass}
+    if recording == 'Yes'
+        a(href='/stopRecording' class='btn btn-danger mr-2') Stop Recording
+    a(href='/' class='btn btn-primary mr-2') Home
+    a(href='/displayClasses' class='btn btn-primary mr-2') Classes

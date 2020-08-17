@@ -1,0 +1,43 @@
+extends layout
+
+block content
+    
+    div(class='container')
+        div(class='row')
+            h1=title
+
+    form(action=action, method="post")
+        div(class='form-group')
+            div(class='container')
+                div(class='row')
+                    label(for="name") Name of the course:
+                    input(class='form-control' type='text' id='name' name='name' value=name)
+                div(class='row') Course zoom code:
+                    label(for="code")
+                    input(class='form-control' type='text' id='code' name='code' value=code)
+                div(class='row') Zoom password hashed in url form
+                    label(for='pwd')
+                    input(class='form-control' type='text' id='pwd' name='pwd' value=pwd)
+                div(class='row')
+                    label(for='teacher') Teacher name:
+                    input(class='form-control' type='text' id='teacher' name='teacher' value=teacher)
+                div(class='row')
+                    label(for='url') Zoom url:
+                    input(class='form-control' type='text' id='url' name='url' value=url)
+                div(class='row')
+                    label(for='myMittyURL') myMitty url:
+                    input(class='form-control' type='text' id='myMittyURL' name='myMittyURL' value=myMittyURL)
+                div(class='row')
+                    label(for='canvasURL') Canvas url:
+                    input(class='form-control' type='text' id='canvasURL' name='canvasURL' value=canvasURL)
+                div(class='row')
+                    label(for='calendarURL') Calendar url:
+                    input(class='form-control' type='text' id='calendarURL' name='calendarURL' value=calendarURL)
+                div(class='d-none')
+                    input(name='id', value=id)
+                div(class='row')
+                    button(type='submit' class='btn btn-primary mt-2') Submit
+                    if title == 'Add Class:'
+                        a(href='/' class='btn btn-danger mt-2 ml-2') Return
+                    else
+                        a(href='/displayClasses' class='btn btn-danger mt-2 ml-2') Return
